@@ -1,15 +1,21 @@
 package people;
 
+import attractions.Attraction;
+
+import java.util.ArrayList;
+
 public class Visitor {
 
     private int age;
     private double height;
     private double money;
+    private ArrayList<attraction> visitedAttractions;
 
     public Visitor(int age, double height, double money) {
         this.age = age;
         this.height = height;
         this.money = money;
+        this.visitedAttractions = new ArrayList<attraction>();
     }
 
     public int getAge() {
@@ -22,5 +28,9 @@ public class Visitor {
 
     public double getMoney() {
         return money;
+    }
+
+    public void addVisitedAttraction() {
+        this.visitedAttractions.add(attraction);
     }
 }
